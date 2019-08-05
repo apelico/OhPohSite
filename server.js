@@ -7,7 +7,7 @@ app.set('port', PORT);
 app.use(express.static('public'));
 
 // default Heroku PORT
-app.listen(process.env.PORT || 4200);
+app.listen(process.env.PORT || 3000);
 
 // Serve static files....
 app.use(express.static(__dirname + '/dist/OhPoh'));
