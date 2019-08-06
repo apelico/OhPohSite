@@ -9,7 +9,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class HourlyWeatherComponent implements OnInit {
   //All hourly json objects
   data: Object[] = [];
-  @Input() hourly = Object;
+  @Input() hourly : any;
 
   constructor() {}
 

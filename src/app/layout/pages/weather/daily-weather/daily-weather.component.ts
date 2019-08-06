@@ -8,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class DailyWeatherComponent implements OnInit {
   //all daily json objects;
   data: Object[] = [];
-  @Input() daily: Object;
+  @Input() daily: any;
 
   constructor() { }
 

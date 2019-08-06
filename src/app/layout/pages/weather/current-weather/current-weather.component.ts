@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./current-weather.component.css']
 })
 export class CurrentWeatherComponent implements OnInit {
-  @Input() current: Object;
+  @Input() current: any;
   @Input() city: String;
 
   constructor() { }
