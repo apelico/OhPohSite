@@ -5,13 +5,13 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { NavBarComponent } from './Layout/nav-bar/nav-bar.component';
-import { BodyComponent } from './Layout/body/body.component';
-import { SideBarComponent } from './Layout/side-bar/side-bar.component';
+import { NavBarComponent } from './layout/nav-bar/nav-bar.component';
+import { BodyComponent } from './layoutlayout/body/body.component';
+import { SideBarComponent } from './layout/side-bar/side-bar.component';
 
-import { DashboardComponent } from './Layout/pages/dashboard/dashboard.component';
-import { WeatherComponent } from './Layout/pages/weather/weather.component';
-import { PortfolioComponent } from './Layout/pages/portfolio/portfolio.component';
+import { DashboardComponent } from './layout/pages/dashboard/dashboard.component';
+import { WeatherComponent } from './layout/pages/weather/weather.component';
+import { PortfolioComponent } from './layout/pages/portfolio/portfolio.component';
 
 @NgModule({
   declarations: [
