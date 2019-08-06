@@ -4,5 +4,5 @@ export class Message {
   message: string;
   isURL: boolean;
   isImage: boolean;
-  imgURL: any;
+  imageURL: any;
 }
