@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { NavBarComponent } from './layout/nav-bar/nav-bar.component';
-import { BodyComponent } from './layout/layout/body/body.component';
+import { BodyComponent } from './layout/body/body.component';
 import { SideBarComponent } from './layout/side-bar/side-bar.component';
 
 import { DashboardComponent } from './layout/pages/dashboard/dashboard.component';
