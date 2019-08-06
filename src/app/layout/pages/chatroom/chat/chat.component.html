@@ -1,0 +1,18 @@
+<div class="body">
+<div class="panel">
+    <div class="chatRoom">
+      <div class="messageContainer">
+        <!-- Loops through the array of messages -->
+        <div class="panel" *ngFor="let message of messages">
+          <!-- Displays and Pushes the Message object to the MessageComponent -->
+          <app-message [message]=message></app-message>
+        </div>
+      </div>
+    </div>
+</div>
+
+<app-user-input (Text)="submitNewMessage($event)" (File)="uploadFile($event)"></app-user-input>
+<div class="username">
+  <input type='input' class="panel textarea" type="text" name="message" [(ngModel)]="username" placeholder="Set Username">
+</div>
+</div>

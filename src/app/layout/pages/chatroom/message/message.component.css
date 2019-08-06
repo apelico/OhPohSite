@@ -1,0 +1,29 @@
+.pic{
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 500px;
+}
+
+.picHolder{
+  margin: 10px;
+}
+
+.info{
+  text-align: center;
+  border-bottom: 2px solid rgba(0,0,0,.2);
+  box-shadow: 0 2px 0 0 rgba(255,255,255,.1);
+}
+
+.messageHolder{
+  margin: 10px;
+}
+
+@media screen and (max-width:767px){
+  .info{
+    font-size: 10px;
+  }
+  .messageHolder{
+    font-size: 10px;
+  }
+}

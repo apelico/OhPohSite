@@ -1,0 +1,11 @@
+<form #myForm="ngForm" class="form input" (ngSubmit)="SubmitMessage()">
+
+<input type='input' class="panel textarea" type="text" name="message" [(ngModel)]="message" placeholder="Message">
+
+<button class="button" onclick="document.getElementById('send').click()"><i class="fa fa-arrow-right"></i></button>
+<input type="submit" id="send" value="Send" class="button" style="display: none">
+
+<button class="button" onclick="document.getElementById('getFile').click()">📎</button>
+<input #file id="getFile" type="file" accept='image/*' (change)="uploadFile(file.files)" style="display: none">
+
+</form>

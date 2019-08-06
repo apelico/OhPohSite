@@ -1,6 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from  '@angular/common/http';
+
+import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
+const config: SocketIoConfig = { url: '', options: {} };
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +17,9 @@ import { SideBarComponent } from './layout/side-bar/side-bar.component';
 import { DashboardComponent } from './layout/pages/dashboard/dashboard.component';
 import { WeatherComponent } from './layout/pages/weather/weather.component';
 import { PortfolioComponent } from './layout/pages/portfolio/portfolio.component';
+import { ChatComponent } from './layout/pages/chatroom/chat/chat.component';
+import { MessageComponent } from './layout/pages/chatroom/message/message.component';
+import { UserInputComponent } from './layout/pages/chatroom/user-input/user-input.component';
 
 @NgModule({
   declarations: [
@@ -21,12 +29,18 @@ import { PortfolioComponent } from './layout/pages/portfolio/portfolio.component
     SideBarComponent,
     DashboardComponent,
     WeatherComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    ChatComponent,
+    MessageComponent,
+    UserInputComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    SocketIoModule.forRoot(config),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

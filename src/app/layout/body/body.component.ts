@@ -9,21 +9,35 @@ import { trigger, state, style, animate, transition, group, query, animateChild 
     trigger('bodyAnimation', [
       state('compact', style({paddingLeft: '75px'})),
       state('expand', style({paddingLeft: '225px'})),
-      transition('compact <=> expand', [
+      state('mobileCompact', style({paddingLeft: '50px'})),
+      state('mobileExpand', style({paddingLeft: '200px'})),
+      transition('* <=> *', [
           animate('.2s')
-      ])
+      ]),
     ]),
   ]
 })
 export class BodyComponent implements OnInit {
   visibleState = 'compact';
+  innerWidth: any;
 
   constructor() { }
 
   ngOnInit() {
+    this.innerWidth = window.innerWidth;
+    if(this.innerWidth >= 767){
+      this.visibleState = 'compact'
+    }else{
+      this.visibleState = 'mobileCompact'
+    }
+
     var navButton = document.querySelector('.nav-click');
     navButton.addEventListener('click', () => {
-      this.visibleState = this.visibleState == 'compact' ? 'expand' : 'compact';
+      if(innerWidth > 767){
+        this.visibleState = this.visibleState == 'compact' ? 'expand' : 'compact';
+      }else{
+        this.visibleState = this.visibleState == 'mobileCompact' ? 'mobileExpand' : 'mobileCompact';
+      }
     });
   }
 

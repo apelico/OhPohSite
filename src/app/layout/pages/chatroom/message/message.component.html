@@ -1,0 +1,33 @@
+<div>
+
+  <div class="info">
+    <!-- Displays the Username -->
+    <div class="username text">
+      {{message.username}}
+    </div>
+
+    <!-- Displays the Date in Month/Day/Year format -->
+    <div class="time text">
+      {{message.date}}
+    </div>
+  </div>
+
+  <div class="panel">
+    <!-- Checks if the message is a URL link -->
+    <div class="picHolder " *ngIf='message.isURL==true'>
+        <img class="pic" src="{{message.message}}" alt="Picture" >
+    </div>
+
+  <!-- Checks if the message is an Image -->
+    <div  class="picHolder" *ngIf='message.isImage==true' >
+        <img class="pic"src="{{message.imageURL}}" alt="Picture" >
+    </div>
+
+  <!-- TODO: Research Angular's If else elements for less of a mess. -->
+  <!-- Shows text if the message is not an Image or Link -->
+    <div class="messageHolder text" *ngIf='(message.isURL==false|| message.isURL == undefined) && (message.isImage == false || message.isImage == undefined)'>
+        {{message.message}}
+    </div>
+  </div>
+
+</div>

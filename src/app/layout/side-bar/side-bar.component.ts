@@ -9,18 +9,21 @@ import { trigger, state, style, animate, transition, group, query, animateChild 
     trigger('sideBarAnimation', [
       state('compact', style({width: '50px'})),
       state('expand', style({width: '200px'})),
-      transition('compact <=> expand', [
+      transition('compact => expand', [
         group([
-          query('@linkAnimation', animateChild()),
+          animate('.2s ease'),
+          query('@linkAnimation', [animateChild()]),
+          query('@titleAnimation', [animateChild()])
+        ])
+      ]),
+      transition('expand => compact', [
           animate('.2s')
-        ]),
-        query('@titleAnimation', animateChild())
-      ])
+      ]),
     ]),
     trigger('linkAnimation', [
       state('compact', style({width: '35px', paddingLeft: '15px'})),
       state('expand', style({width: '180px', paddingLeft: '20px'})),
-      transition('compact <=> expand', [animate('.2s')])
+      transition('* <=> *', [animate('.2s')])
     ]),
     trigger('titleAnimation', [
       state('compact', style({ opacity: 0, fontSize: '0px'})),
