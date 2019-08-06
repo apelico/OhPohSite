@@ -1,0 +1,52 @@
+<div class="panel body">
+  <!-- Sets the main information -->
+  <div class="heading">
+    {{city}}<br>
+    {{current.temperature}}°F<br>
+    {{current.summary}}
+  </div>
+
+  <!-- Sets the extra information -->
+  <div class="information">
+
+    <div class="panel extra">
+      <div class="space">
+        <div class="content">
+          FeelsLike <br>{{current.apparentTemperature}}°F
+        </div>
+      </div>
+      <div class="space">
+        <div class="content">
+          Humidity <br> {{current.humidity}}%
+        </div>
+      </div>
+    </div>
+
+    <div class="panel extra">
+      <div class="space">
+        <div class="content">
+          RainChance <br>{{current.precipProbability}}%°F
+        </div>
+      </div>
+      <div class="space">
+        <div class="content">
+          DewPoint <br>{{current.dewPoint}}%
+        </div>
+      </div>
+    </div>
+
+    <div class="panel extra">
+      <div class="space">
+        <div class="content">
+          WindSpeed <br>{{current.windSpeed}}MPH
+        </div>
+      </div>
+      <div class="space">
+        <div class="content">
+          WindGust <br>{{current.windGust}}MPH
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>

@@ -1,0 +1,8 @@
+<form #myForm="ngForm" class="form input" (ngSubmit)="onSubmit()">
+
+<input type='input' class="panel textarea" type="text" name="cityName" [(ngModel)]="cityName" placeholder="Enter City">
+
+<button class="button" onclick="document.getElementById('send').click()"><i class="fa fa-arrow-right"></i></button>
+<input type="submit" id="send" value="Send" class="button" style="display: none">
+
+</form>

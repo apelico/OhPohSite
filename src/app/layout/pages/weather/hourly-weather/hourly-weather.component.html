@@ -1,0 +1,15 @@
+<div class="panel" *ngIf="data">
+  <div class="container" *ngFor="let hour of data">
+    <div class="information">
+      <div class="box">
+        {{hour.time}}
+      </div>
+      <div class="temperature">
+      {{hour.temperature}}°F
+      </div>
+      <div class="rain-chance">
+        {{hour.precipProbability}}%
+      </div>
+    </div>
+  </div>
+</div>

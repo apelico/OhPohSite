@@ -16,31 +16,34 @@ let key2 = process.env.DARKSKYKEY;
 app.post('/weatherLog', function(req, res) {
   let city = req.body.city;
   let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${key1}`
+  let weather;
 
   request(url, function(err, response, body) {
     if (err) {
       throw console.error();
     } else {
-      let weather = JSON.parse(body)
+      weather = JSON.parse(body);
       if (weather.cod == '404') {
         res.json({
           error: "NoCity"
         });
       } else {
-        let darkUrl = `https://api.darksky.net/forecast/${key2}/${weather.coord.lat},${weather.coord.lon}`;
-        request(darkUrl, function(err, response, body) {
-          if (err) {
-            throw console.error();
-          } else {
-            let darkWeather = JSON.parse(body)
-            res.json({
-              city: city,
-              current: darkWeather.currently,
-              hourly: darkWeather.hourly,
-              daily: darkWeather.daily
-            })
-          }
-        });
+        if(weather.coord != undefined){
+          let darkUrl = `https://api.darksky.net/forecast/${key2}/${weather.coord.lat},${weather.coord.lon}`;
+          request(darkUrl, function(err, response, body) {
+            if (err) {
+              throw console.error();
+            } else {
+              let darkWeather = JSON.parse(body)
+              res.json({
+                city: city,
+                current: darkWeather.currently,
+                hourly: darkWeather.hourly,
+                daily: darkWeather.daily
+              })
+            }
+          });
+        }
       }
     }
   });

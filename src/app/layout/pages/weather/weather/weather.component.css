@@ -1,0 +1,16 @@
+.tabs{
+  display: inline-block;
+  vertical-align:top
+}
+
+.current{
+  margin-left: auto;
+  margin-right: auto;
+  display: table;
+}
+
+.extra{
+  margin-left: auto;
+  margin-right: auto;
+  display: table;
+}

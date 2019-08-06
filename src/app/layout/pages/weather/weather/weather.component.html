@@ -1,0 +1,19 @@
+<div class="weather">
+
+  <app-city-search (city)="searchCity($event)"></app-city-search>
+
+    <div *ngIf="current" class="current">
+      <app-current-weather [current]="current" [city]="city"></app-current-weather>
+    </div>
+
+    <div class="extra">
+      <div *ngIf="hourly" class="tabs">
+          <app-hourly-weather [hourly]="hourly"></app-hourly-weather>
+      </div>
+
+      <div *ngIf="daily" class="tabs">
+        <app-daily-weather [daily]="daily"></app-daily-weather>
+      </div>
+    </div>
+
+</div>

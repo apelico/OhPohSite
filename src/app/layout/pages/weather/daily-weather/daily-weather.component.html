@@ -1,0 +1,23 @@
+<div class="panel" *ngIf="data">
+  <div class="container" *ngFor="let daily of data">
+    <div class="time">
+      {{daily.time}}
+    </div>
+    <div class="information">
+      <div>
+        High <br>
+        {{daily.temperatureHigh}}°F
+      </div>
+
+      <div class="temperature">
+        Low <br>
+      {{daily.temperatureLow}}°F
+      </div>
+
+      <div>
+        Rain <br>
+        {{daily.precipProbability}}%
+      </div>
+    </div>
+  </div>
+</div>
