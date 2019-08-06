@@ -7,8 +7,8 @@ import { trigger, state, style, animate, transition, group, query, animateChild 
   styleUrls: ['./body.component.css'],
   animations: [
     trigger('bodyAnimation', [
-      state('compact', style({paddingLeft: '50px'})),
-      state('expand', style({paddingLeft: '200px'})),
+      state('compact', style({paddingLeft: '75px'})),
+      state('expand', style({paddingLeft: '225px'})),
       transition('compact <=> expand', [
           animate('.2s')
       ])

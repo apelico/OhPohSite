@@ -1,16 +1,4 @@
 .main{
-  padding-top: 75px;
-  padding-left: 200px;
-}
-
-.panel{
-  background-color: rgba(255,255,255,.2);
-  box-shadow: 0 5px 5px 0 rgba(0,0,0.25);
-  border-radius: 5px;
-  display: inline-block;
-}
-
-.panel-content{
-  margin: 5px;
-  color:black;
+  padding-top: 100px;
+  padding-right: 25px;
 }

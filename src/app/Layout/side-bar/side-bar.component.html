@@ -1,20 +1,23 @@
 <div [@sideBarAnimation]="visibleState" class="side-bar collapse">
   <ul class="nav-links">
-    <div [@linkAnimation]="visibleState">
+    <a [@linkAnimation]="visibleState" routerLink="dashboard" [routerLinkActive]="'active'">
       <i class="fa fa-home"></i>
       <i [@titleAnimation]="visibleState" class="link-title">Dashboard</i>
-    </div>
-    <div [@linkAnimation]="visibleState">
+    </a>
+
+    <a [@linkAnimation]="visibleState">
       <i class="fa fa-address-book"></i>
       <i [@titleAnimation]="visibleState" class="link-title">Chat</i>
-    </div>
-    <div [@linkAnimation]="visibleState">
+    </a>
+
+    <a [@linkAnimation]="visibleState" routerLink="weather" [routerLinkActive]="'active'">
       <i class="fa fa-calendar"></i>
       <i [@titleAnimation]="visibleState" class="link-title">Weather</i>
-    </div>
-    <div [@linkAnimation]="visibleState">
+    </a>
+
+    <a [@linkAnimation]="visibleState" routerLink="portfolio" [routerLinkActive]="'active'">
       <i class="fa fa-check"></i>
       <i [@titleAnimation]="visibleState" class="link-title">Portfolio</i>
-    </div>
+    </a>
   </ul>
 </div>
