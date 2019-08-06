@@ -9,8 +9,8 @@ import {Message} from '../message';
   styleUrls: ['./chat.component.css']
 })
 export class ChatComponent implements OnInit {
-  private messages : Message[];
-  private username: string;
+  messages : Message[];
+  username: string;
 
   constructor(private messageService : MessageService) { }
 
