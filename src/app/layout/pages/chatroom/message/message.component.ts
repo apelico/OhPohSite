@@ -7,12 +7,12 @@ import { Message } from '../message';
   styleUrls: ['./message.component.css']
 })
 export class MessageComponent implements OnInit {
-  @Input() message = Message;
+  @Input() message : Message;
 
   constructor() { }
 
   ngOnInit() {
-
+    console.log(this.message);
   }
 
 }
