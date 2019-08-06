@@ -2,12 +2,12 @@
 
   <div class="info">
     <!-- Displays the Username -->
-    <div class="username text">
+    <div class="username">
       {{message.username}}
     </div>
 
     <!-- Displays the Date in Month/Day/Year format -->
-    <div class="time text">
+    <div class="time">
       {{message.date}}
     </div>
   </div>
@@ -25,7 +25,7 @@
 
   <!-- TODO: Research Angular's If else elements for less of a mess. -->
   <!-- Shows text if the message is not an Image or Link -->
-    <div class="messageHolder text" *ngIf='(message.isURL==false|| message.isURL == undefined) && (message.isImage == false || message.isImage == undefined)'>
+    <div class="messageHolder" *ngIf='(message.isURL==false|| message.isURL == undefined) && (message.isImage == false || message.isImage == undefined)'>
         {{message.message}}
     </div>
   </div>

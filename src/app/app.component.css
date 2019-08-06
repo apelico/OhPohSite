@@ -1,19 +1,35 @@
-html,body{
-  background-color: black;
-}
-
 .OhPoh{
   background-image: url("assets/blur-bg.jpg");
-  height:100vh;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+}
+.top-nav-bar{
+  height:75px;
+  width: 100%;
+  position: fixed;
+  overflow: hidden;
+}
+
+.side-nav-bar{
+  position: fixed;
+  height:100%;
+  overflow: hidden;
+  margin-top: 75px;
+}
+
+.main-body{
+  position: fixed;
+  width: 100%;
 }
 
 .OhPoh::-webkit-scrollbar{
   width: 0 !important;
 }
 
-.MainBody{
-  padding-left: 200px;
-  padding-top: 75px;
+@media screen and (max-width:767px){
+  .side-nav-bar{
+    margin-top: 50px;
+  }
 }

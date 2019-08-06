@@ -65,11 +65,13 @@ MongoClient.connect(uri, {
 });
 
 app.get('/getMessages', function(req, res) { //**** http request receiver ****
-  chatDatabase.find().toArray((err, result) => {
-    res.send({
-      database: result
+  if (chatDatabase != undefined) {
+    chatDatabase.find().toArray((err, result) => {
+      res.send({
+        database: result
+      });
     });
-  });
+  }
 });
 
 //Socket.io
@@ -143,7 +145,11 @@ io.on("connection", socket => {
                 isImage: false,
                 imageURL: ""
               }
-              chatDatabase.updateOne({_id: result[i]._id}, {$set: newM});
+              chatDatabase.updateOne({
+                _id: result[i]._id
+              }, {
+                $set: newM
+              });
               io.emit("message", newM);
             }
           });
@@ -168,9 +174,9 @@ function getDate() {
 
   if (hour > 12) {
     hour -= 12;
-    return month + "/" + day + "/" + year + " - " + hour + ":" + minute + "PM";
+    return month + "/" + day + "/" + year;
   } else {
-    return month + "/" + day + "/" + year + " - " + hour + ":" + minute + "AM";
+    return month + "/" + day + "/" + year;
   }
   return "Null Date";
 }

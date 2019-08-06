@@ -1,11 +1,29 @@
 .main{
-  padding-top: 100px;
-  padding-right: 25px;
-  padding-left: 75px;
+  margin-top: 75px;
+  margin-left: 75px;
+  margin-right: 25px;
+  position: fixed;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  max-height: calc(100vh - 75px);
+  width: calc(100% - 100px);
 }
 
-@media screen and (max-width:768px){
+.main::-webkit-scrollbar{
+  width: 0 !important;
+}
+
+@media not all and (min-resolution:.001dpcm) { @media {
   .main{
-    padding-right: 25px;
+    max-height: calc(100vh - 128px);
+  }
+}}
+
+@media screen and (max-width:767px){
+  .main{
+    margin-top: 50px;
+    margin-right: 0px;
+    margin-left: 50px;
+      width: calc(100% - 50px);
   }
 }

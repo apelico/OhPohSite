@@ -12,7 +12,6 @@ export class MessageComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.message);
   }
 
 }

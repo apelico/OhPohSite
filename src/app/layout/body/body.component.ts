@@ -7,10 +7,10 @@ import { trigger, state, style, animate, transition, group, query, animateChild 
   styleUrls: ['./body.component.css'],
   animations: [
     trigger('bodyAnimation', [
-      state('compact', style({paddingLeft: '75px'})),
-      state('expand', style({paddingLeft: '225px'})),
-      state('mobileCompact', style({paddingLeft: '50px'})),
-      state('mobileExpand', style({paddingLeft: '200px'})),
+      state('compact', style({marginLeft: '75px'})),
+      state('expand', style({marginLeft: '225px'})),
+      state('mobileCompact', style({marginLeft: '50px'})),
+      state('mobileExpand', style({marginLeft: '200px'})),
       transition('* <=> *', [
           animate('.2s')
       ]),
