@@ -11,7 +11,7 @@ body{
 }
 
 .panel{
-  background-color: rgba(100,100,100,.3);
+  background-color: rgba(0,0,0,.3);
   box-shadow: 0 5px 5px 0 rgba(0,0,0.25);
   border-radius: 5px;
   display: inline-block;

@@ -1,3 +1,7 @@
+*{
+  color: White;
+}
+
 .tabs{
   display: inline-block;
   vertical-align:top

@@ -39,6 +39,16 @@ export class BodyComponent implements OnInit {
         this.visibleState = this.visibleState == 'mobileCompact' ? 'mobileExpand' : 'mobileCompact';
       }
     });
+
+    console.log(document.querySelector('.main'));
+    document.querySelector('.main').addEventListener('touchstart', function(event){
+    if( this.scrollTop === 0 ) {
+        this.scrollTop += 1;
+    } else if( this.scrollTop + this.offsetHeight >= this.scrollHeight ) {
+        this.scrollTop -= 1;
+    }
+  });
+
   }
 
 }
