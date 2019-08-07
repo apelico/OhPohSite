@@ -19,6 +19,7 @@ export class ChatComponent implements OnInit {
     //Gets the database from the server.
     this.messageService.getMessages().subscribe(messages => {
       this.messages = messages["database"];
+      this.moveToBottom(100);
     });
     //Gets any new messages sent using Socket.IO
     this.messageService.getNewMessage().subscribe(newMessage => {
@@ -26,7 +27,7 @@ export class ChatComponent implements OnInit {
       this.messages.push(newMessage);
       this.messages.shift();
 
-      this.moveToBottom();
+      this.moveToBottom(100);
     });
   }
 
@@ -64,7 +65,7 @@ export class ChatComponent implements OnInit {
     }else{
       this.messageService.newMessage(this.username,message,false);
     }
-    this.moveToBottom();
+    this.moveToBottom(100);
   }
 
   isUrlCheck(str) {
@@ -85,18 +86,18 @@ export class ChatComponent implements OnInit {
     reader.onload = (_event) => {
       this.messageService.newPicture(this.username,reader.result);
     }
-    this.moveToBottom();
+    this.moveToBottom(100);
   }
 
   //Scrolls the page to the bottom of the screen.
-  moveToBottom() {
+  moveToBottom(time) {
     return new Promise(resolve => {
       setTimeout(() => {
         let d = document.querySelector('.main');
         if(d){
           d.scrollTop = d.scrollHeight;
         }
-      }, 100);
+      }, time);
     });
   }
 
