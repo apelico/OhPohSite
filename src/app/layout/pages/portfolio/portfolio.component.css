@@ -43,19 +43,11 @@
   font-size: 15px;
 }
 
-.content li a{
-  display: list-item;
-  list-style: none;
-  margin-top: 5px;
-  margin-left: 40px;
-  margin-right: 10px;
-  font-size: 15px;
+.link{
   color: rgb(133, 175, 242);
+  text-decoration: none;
 }
 
-.content li div a{
-  color: rgb(133, 175, 242);
-}
-.content a{
-  color: rgb(133, 175, 242);
+.contact li{
+  margin-right: 20px;
 }
