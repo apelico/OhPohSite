@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: '', component: DashboardComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'weather', component: WeatherComponent },
-  { path: 'portfolio', component: PortfolioComponent },
+  { path: 'summary', component: PortfolioComponent },
   { path: 'chat', component: ChatComponent },
 ];
 

@@ -55,16 +55,16 @@ var MongoClient = mongodb.MongoClient;
 var uri = process.env.MONGODB_URI;
 
 var chatDatabase;
+var data;
 
-MongoClient.connect(uri, {
-  useNewUrlParser: true
-}, function(err, db) {
+MongoClient.connect(uri, {useNewUrlParser: true}, function(err, db) {
   if (!err) {
     console.log('Connection established to', uri);
+    chatDatabase = db.db("chatlog").collection("database");
+    data = db.db('personal').collection('ohpohdata');
   } else {
     console.log("Failed to connect", uri);
   }
-  chatDatabase = db.db("chatlog").collection("database");
 });
 
 app.get('/getMessages', function(req, res) { //**** http request receiver ****
@@ -76,6 +76,21 @@ app.get('/getMessages', function(req, res) { //**** http request receiver ****
     });
   }
 });
+
+app.get('/data', function(request,response) {
+  if (data != undefined) {
+    data.find().toArray((error, result) => {
+      if(!error){
+        res.send({
+          database: result
+        });
+      }else{
+        console.log("error getting /data");
+      }
+    });
+  }
+});
+
 
 //Socket.io
 var maxMessages = 14;

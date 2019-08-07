@@ -13,7 +13,7 @@ import { trigger, state, style, animate, transition, group, query, animateChild 
         group([
           animate('.2s ease'),
           query('@linkAnimation', [animateChild()]),
-          query('@titleAnimation', [animateChild()])
+          //query('@titleAnimation', [animateChild()])
         ])
       ]),
       transition('expand => compact', [
@@ -23,12 +23,10 @@ import { trigger, state, style, animate, transition, group, query, animateChild 
     trigger('linkAnimation', [
       state('compact', style({width: '35px', paddingLeft: '15px'})),
       state('expand', style({width: '180px', paddingLeft: '20px'})),
-      transition('* <=> *', [animate('.2s')])
     ]),
     trigger('titleAnimation', [
       state('compact', style({ opacity: 0, fontSize: '0px'})),
       state('expand', style({ opacity: 1, fontSize: '15px'})),
-      transition('* => expand', [animate('.2s')])
     ]),
   ]
 })
