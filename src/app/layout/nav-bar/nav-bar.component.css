@@ -3,7 +3,7 @@
   height: 75px;
   background-color: rgb(0,0,0,.7);
   box-shadow: 2px 0 3px (0,0,0,.5);
-  padding: 0 32px 0 40px;
+  padding: 0 32px 0 15px;
   align-items: center;
   display: block;
   z-index: 100;
@@ -17,6 +17,7 @@
   white-space: nowrap;
   float: left;
   line-height: 75px;
+  margin-left: 30px;
 }
 
 .logo span{
@@ -35,8 +36,8 @@
   color:white;
   font-size: 30px;
   line-height: 75px;
-  margin-left: 30px;
   cursor: pointer;
+  float: left;
 }
 
 @media screen and (max-width:500px){

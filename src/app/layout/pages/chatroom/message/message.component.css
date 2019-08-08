@@ -5,6 +5,12 @@
   max-height: 500px;
 }
 
+.username{
+  word-break: break-all;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 .picHolder{
   margin: 10px;
 }
@@ -15,6 +21,7 @@
 
 .messageHolder{
   margin: 10px;
+  word-break: break-all;
 }
 .username{
   font-size: 20px;

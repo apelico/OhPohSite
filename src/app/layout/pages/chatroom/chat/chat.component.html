@@ -10,5 +10,5 @@
     <input type='input' class="textarea" type="text" name="message" [(ngModel)]="username" placeholder="Name">
     <input type="submit" id="send" value="Send" class="button" style="display: none">
   </form>
-  <app-user-input (Text)="submitNewMessage($event)" (File)="uploadFile($event)"></app-user-input>
 </div>
+<app-user-input (Text)="submitNewMessage($event)" (File)="uploadFile($event)"></app-user-input>
