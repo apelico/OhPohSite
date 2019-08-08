@@ -4,7 +4,6 @@
   margin-right: 25px;
   overflow-y: auto/scroll;
   overflow-x: hidden;
-  scroll-behavior: smooth;
   -webkit-overflow-scrolling:touch;
 
   max-height: calc(100vh - 75px);

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { trigger, state, style, animate, transition, group, query, animateChild } from '@angular/animations';
 
 @Component({
@@ -24,6 +24,7 @@ export class BodyComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
     this.innerWidth = window.innerWidth;
     if(this.innerWidth >= 767){
       this.visibleState = 'compact'
@@ -40,7 +41,6 @@ export class BodyComponent implements OnInit {
       }
     });
 
-    console.log(document.querySelector('.main'));
     document.querySelector('.main').addEventListener('touchstart', function(event){
     if( this.scrollTop === 0 ) {
         this.scrollTop += 1;
