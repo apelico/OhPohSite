@@ -1,9 +1,13 @@
-.panel{
+.container{
   max-width: 500px;
-  vertical-align: top;
   margin-left: auto;
   margin-right: auto;
   display: table;
+}
+
+.panel{
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .title{

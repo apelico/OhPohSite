@@ -24,14 +24,6 @@
   color: #209e91;
 }
 
-.creator{
-  display: block;
-  float:right;
-  margin-right: 100px;
-  color:white;
-  font-size: 20px;
-}
-
 .fa-bars{
   color:white;
   font-size: 30px;
@@ -40,9 +32,8 @@
   float: left;
 }
 
-@media screen and (max-width:500px){
+@media screen and (max-width:767px){
   .navbar-top{
-    height:auto;
     height:50;
   }
   .logo{
@@ -51,9 +42,6 @@
   }
   .fa-bars{
     line-height: 50px;
-    font-size: 20px;
-  }
-  .creator{
-    display: none;
+    font-size: 30px;
   }
 }
