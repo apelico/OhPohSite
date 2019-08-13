@@ -13,6 +13,7 @@ export class DailyWeatherComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log(this.data);
     //Loop for 7 day forcast
     for(var i = 0; i < 7;i++)
     {

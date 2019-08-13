@@ -2,18 +2,12 @@ import { Injectable } from '@angular/core';
 import { Socket } from 'ngx-socket-io';
 import { Message } from './message';
 import {Observable} from 'rxjs';
-import {HttpClient, HttpHeaders } from '@angular/common/http';
-
-const httpOptions = {
-  headers: new HttpHeaders({
-    'Content-Type': 'application/json'
-  })
-}
+import {HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
-export class MessageService {
+export class MessageService{
   //Gets newest message from server
   message = this.socket.fromEvent<Message>('message');
 
